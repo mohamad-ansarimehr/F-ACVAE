@@ -77,7 +77,8 @@ class CMGAStrategy(fl.server.strategy.FedAvg):
         clipped_variances = clip_variances(separated_means)
 
         # Combine updated shared parameters and priors into new global model
-        return new_global_parameters, {}```
+        return new_global_parameters, {}
+```
 		
 For the complete source code, refer to the implementation in the repository:
 https://github.com/mohamad-ansarimehr/F-CTVAE (typically in strategy/cmga.py or equivalent).
