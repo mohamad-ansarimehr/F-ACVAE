@@ -96,3 +96,12 @@ class CMGAStrategy(fl.server.strategy.FedAvg):
         clipped_variances = clip_variances(separated_means)
 
         return new_global_parameters, {}
+		
+For the complete source code, refer to the implementation in the repository:
+https://github.com/mohamad-ansarimehr/F-ACVAE (typically in strategy/cmga.py or equivalent).
+
+## Reference
+For full details, see Section "Constrained Momentum Gaussian Aggregation (CMGA)" in the paper:
+**F-ACVAE: A Federated Adaptive Conditional Variational Auto-Encoder for Privacy-Preserving Intrusion Detection in IoT Networks**
+
+Mohammad Ansarimehr, Somayeh Changiz, Ehsan Baghshani, Ali Mousavi (2025)
