@@ -1,46 +1,49 @@
-# F-CTVAE: Federated Constrained Twin Variational Auto-Encoder for Privacy-Preserving Intrusion Detection in IoT Networks
+# F-ACVAE: Federated Adaptive Conditional Variational Auto-Encoder for Privacy-Preserving Intrusion Detection in IoT Networks
 
-**F-CTVAE** is a privacy-preserving, semi-supervised framework that federates the state-of-the-art **Constrained Twin Variational Auto-Encoder (CTVAE)** using the **Flower (flwr)** framework for intrusion detection in highly heterogeneous IoT networks.
+**F-ACVAE** is a privacy-preserving federated learning framework that extends the centralized **Conditional Variational Auto-Encoder (CTVAE)** paradigm to highly heterogeneous IoT environments.  
+The proposed approach is specifically designed to address extreme non-IID data distributions while preserving data privacy and minimizing communication overhead.
 
-### Key Features
-- **Full raw data privacy**: No raw data ever leaves client devices.
-- **62% reduction in communication overhead**: Only the hermaphrodite mapper, decoder, and class-specific Gaussian priors are selectively aggregated; local encoders remain strictly private.
-- **Custom Constrained Momentum Gaussian Aggregation (CMGA) strategy**:
-  - Momentum-enhanced updates for class-conditioned priors
-  - Proximal enforcement of inter-class separation in latent space
-  - Preserves (and enhances) discriminative structure under severe non-IID conditions
-- **Superior performance over centralized CTVAE**:
-  - Average macro F1-score: **96.70%** (vs. 92.88% for centralized CTVAE, **+3.82 pp improvement**)
-  - Peak macro F1-score up to **99.37%**
-  - Accuracy up to **98.75%**
+## Key Features
+- **Strict raw data privacy**: No raw data is exchanged between clients and the server during training.
+- **Selective parameter aggregation**:  
+  Only a subset of model parameters, including class-conditioned latent priors and decoder-related components, are aggregated, while local encoders remain private at the client side.
+- **Constrained Momentum Gaussian Aggregation (CMGA)**:
+  - Momentum-based aggregation for stabilizing class-specific Gaussian priors  
+  - Constraint-aware updates to preserve inter-class separability in the latent space  
+  - Robust performance under severe non-IID and device-heterogeneous settings
+- **Superior performance compared to centralized baselines**:
+  - Achieves the highest accuracy in **8 out of 9 device-specific subsets**
+  - Best overall **average accuracy of 99.0%**
+  - Consistently superior **Macro F1-score across all scenarios**, with an average value of **99.0%**
 
-### Dataset
-Evaluated on the benchmark **N-BaIoT** dataset with six highly non-IID device-specific clients simulating real-world IoT botnet traffic (Mirai and Bashlite attacks).
+## Dataset
+The proposed framework is evaluated on the benchmark **N-BaIoT** dataset, using nine device-specific subsets that simulate realistic IoT botnet traffic scenarios, including **Mirai** and **Bashlite** attacks, under highly heterogeneous and non-IID conditions.
 
-### Implementation
-- Built with **PyTorch 2.1** and **Flower 1.8**
-- Custom Flower Strategy for selective and constrained aggregation
-- Includes server pre-training, client fine-tuning, and real-time inference algorithms
+## Implementation
+- Implemented using **PyTorch** and the **Flower (flwr)** federated learning framework
+- Custom federated strategy for selective parameter aggregation and CMGA-based updates
+- End-to-end pipeline including server initialization, client-side training, and inference
 
-### Results
-F-CTVAE consistently outperforms the centralized CTVAE baseline in macro F1-score across all clients while drastically reducing bandwidth usage and fully preserving privacy.
+## Results
+Experimental results demonstrate that F-ACVAE consistently outperforms the centralized CTVAE baseline across most device-specific subsets, despite operating in a federated and privacy-preserving setting.  
+The results highlight the effectiveness of the proposed aggregation strategy in maintaining a well-conditioned and discriminative latent representation without raw data exchange.
 
-For details, see the paper:  
-**F-CTVAE: A Federated Constrained Twin VAE for Privacy-Preserving Intrusion Detection in IoT Networks**  
+## Paper
+**F-ACVAE: A Federated Adaptive Conditional VAE for Privacy-Preserving Intrusion Detection in IoT Networks**  
 Ali Mousavi, Somayeh Changiz, Ehsan Baghshani, Mohammad Ansarimehr
 
-### Repository Contents
+## Repository Contents
 - Source code for model architecture, federated training, and evaluation
 - Scripts for reproducing experiments on the N-BaIoT dataset
-- Configuration files and pre-trained models
+- Configuration files and trained model checkpoints
 
-### Citation
-If you use this code or method in your research, please cite:
+## Citation
+If you use this method or code in your research, please cite:
 
 ```bibtex
-@article{mousavi2025fctvae,
-  title={F-CTVAE: A Federated Constrained Twin VAE for Privacy-Preserving Intrusion Detection in IoT Networks},
+@article{mousavi2025facvae,
+  title={F-ACVAE: A Federated Adaptive Conditional Variational Auto-Encoder for Privacy-Preserving Intrusion Detection in IoT Networks},
   author={Mousavi, Ali and Changiz, Somayeh and Baghshani, Ehsan and Ansarimehr, Mohammad},
-  journal={IEEE Transactions on ...}, % Update with actual publication details if available
+  journal={IEEE Transactions on ...}, % To be updated
   year={2025}
 }
