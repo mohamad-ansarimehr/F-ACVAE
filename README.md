@@ -30,7 +30,7 @@ The results highlight the effectiveness of the proposed aggregation strategy in 
 
 ## Paper
 **F-ACVAE: A Federated Adaptive Conditional VAE for Privacy-Preserving Intrusion Detection in IoT Networks**  
-Ali Mousavi, Somayeh Changiz, Ehsan Baghshani, Mohammad Ansarimehr
+Mohammad Ansarimehr, Somayeh Changiz, Ehsan Baghshani, Ali Mousavi
 
 ## Repository Contents
 - Source code for model architecture, federated training, and evaluation
@@ -41,9 +41,9 @@ Ali Mousavi, Somayeh Changiz, Ehsan Baghshani, Mohammad Ansarimehr
 If you use this method or code in your research, please cite:
 
 ```bibtex
-@article{mousavi2025facvae,
+@article{ansarimehr2025facvae,
   title={F-ACVAE: A Federated Adaptive Conditional Variational Auto-Encoder for Privacy-Preserving Intrusion Detection in IoT Networks},
-  author={Mousavi, Ali and Changiz, Somayeh and Baghshani, Ehsan and Ansarimehr, Mohammad},
+  author={Ansarimehr, Mohammad and Changiz, Somayeh and Baghshani, Ehsan and Mousavi, Ali},
   journal={IEEE Transactions on ...}, % To be updated
   year={2025}
 }
