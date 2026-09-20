@@ -5,7 +5,8 @@ This folder contains three aligned outputs derived from the final version of the
 ```text
 F_ACVAE.py              # Standalone single-file Python implementation
 F_ACVAE_clean.ipynb     # Clean and executable project notebook
-README_F_ACVAE_EN.md    # English project structure and execution documentation
+README.md    # English project structure and execution documentation
+README (fa).md    # Farsi project structure and execution documentation
 ```
 
 ## Project Overview
@@ -55,7 +56,8 @@ Simple layout — datasets directly next to the code:
 F_ACVAE_Project/
 ├── F_ACVAE.py
 ├── F_ACVAE_clean.ipynb
-├── README_F_ACVAE_EN.md
+├── README.md
+├── README (fa).md
 ├── N-BaIoT/
 ├── UNSW-NB15/
 └── CIC-IDS2017/
@@ -67,7 +69,8 @@ Alternatively:
 F_ACVAE_Project/
 ├── F_ACVAE.py
 ├── F_ACVAE_clean.ipynb
-├── README_F_ACVAE_EN.md
+├── README.md
+├── README (fa).md
 └── dataset/
     ├── N-BaIoT/
     ├── UNSW-NB15/

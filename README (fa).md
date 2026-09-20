@@ -5,7 +5,8 @@
 ```text
 F_ACVAE.py              # اجرای مستقل و یک‌فایلی Python
 F_ACVAE_clean.ipynb     # نوت‌بوک تمیز و قابل اجرای پروژه
-README_F_ACVAE.md       # مستندات اجرا و ساختار پروژه
+README.md       #  (انگلیسی)مستندات اجرا و ساختار پروژه
+README (fa).md       #  (فارسی)مستندات اجرا و ساختار پروژه
 ```
 
 ## معرفی پروژه
@@ -53,7 +54,8 @@ py .\F_ACVAE.py
 F_ACVAE_Project/
 ├── F_ACVAE.py
 ├── F_ACVAE_clean.ipynb
-├── README_F_ACVAE.md
+├── README.md
+├── README (fa).md
 ├── N-BaIoT/
 ├── UNSW-NB15/
 └── CIC-IDS2017/
@@ -65,7 +67,8 @@ F_ACVAE_Project/
 F_ACVAE_Project/
 ├── F_ACVAE.py
 ├── F_ACVAE_clean.ipynb
-├── README_F_ACVAE.md
+├── README.md
+├── README (fa).md
 └── dataset/
     ├── N-BaIoT/
     ├── UNSW-NB15/
