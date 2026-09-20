@@ -5,8 +5,8 @@ This folder contains three aligned outputs derived from the final version of the
 ```text
 F_ACVAE.py              # Standalone single-file Python implementation
 F_ACVAE_clean.ipynb     # Clean and executable project notebook
-README.md    # English project structure and execution documentation
-README (fa).md    # Farsi project structure and execution documentation
+README.md				# English project structure and execution documentation
+README (fa).md 			# Farsi project structure and execution documentation
 ```
 
 ## Project Overview
